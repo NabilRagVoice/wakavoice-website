@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang|default('fr') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Waka Com{% endblock %} - Centre de Contact IA</title>
+    <meta name="description"
+        content="{% block meta_description %}Waka Com : Centre de contact IA multicanal. Agents conversationnels 100% IA pour service client, télévente, prise de RDV via téléphone, SMS, WhatsApp, email et réseaux sociaux.{% endblock %}">
+
+    {% block head %}{% endblock %}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <meta name="theme-color" content="#4A148C">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons (moderne, léger, cohérent) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <!-- Skip link pour accessibilité -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="{{ url_for('home.index') }}" class="logo-section">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Waka Com Logo"
+                    onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <h1>Waka Com</h1>
+                    <p>Centre de Contact IA</p>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-nav" id="mainNav">
+                <a href="{{ url_for('home.index') }}"
+                    class="nav-link {% if request.endpoint == 'home.index' %}active{% endif %}">
+                    <i data-lucide="home"></i>
+                    <span>Accueil</span>
+                </a>
+
+                <a href="{{ url_for('products.index') }}"
+                    class="nav-link {% if request.endpoint and 'products' in request.endpoint %}active{% endif %}">
+                    <i data-lucide="layout-grid"></i>
+                    <span>Services</span>
+                </a>
+
+                <a href="{{ url_for('platform.index') }}"
+                    class="nav-link {% if request.endpoint and 'platform' in request.endpoint %}active{% endif %}">
+                    <i data-lucide="cpu"></i>
+                    <span>Technologie</span>
+                </a>
+
+                <a href="{{ url_for('benchmark.index') }}"
+                    class="nav-link {% if request.endpoint and 'benchmark' in request.endpoint %}active{% endif %}">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>Benchmark</span>
+                </a>
+
+                <a href="{{ url_for('blog.index') }}"
+                    class="nav-link {% if request.endpoint and 'blog' in request.endpoint %}active{% endif %}">
+                    <i data-lucide="file-text"></i>
+                    <span>Blog</span>
+                </a>
+
+                <button type="button" class="nav-link nav-cta" id="openDemoChat" aria-label="Demander une Démo">
+                    <i data-lucide="message-circle"></i>
+                    <span>Demander une Démo</span>
+                </button>
+            </nav>
+
+            <!-- Menu Toggle Mobile -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main-content" id="main-content" tabindex="-1">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+            <i
+                data-lucide="{% if category == 'success' %}check-circle{% elif category == 'error' %}alert-circle{% else %}info{% endif %}"></i>
+            <span>{{ message }}</span>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Waka Com</h3>
+                    <p>Centre de contact multicanal 100% IA, construit sur Azure AI Foundry. Service client, télévente,
+                        prise de RDV et enquêtes via téléphone, SMS, WhatsApp, email et réseaux sociaux. Personnalisation totale.</p>
+                    <div class="footer-badges">
+                        <span class="footer-badge"><i data-lucide="shield-check"></i> RGPD</span>
+                        <span class="footer-badge"><i data-lucide="badge-check"></i> ISO 27001</span>
+                        <span class="footer-badge"><i data-lucide="cloud"></i> Azure AI</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="{{ url_for('products.index') }}">Service Client</a></li>
+                        <li><a href="{{ url_for('products.index') }}">Télévente</a></li>
+                        <li><a href="{{ url_for('products.index') }}">Prise de RDV</a></li>
+                        <li><a href="{{ url_for('products.index') }}">Enquêtes & Sondages</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Canaux</h4>
+                    <ul>
+                        <li><a href="{{ url_for('platform.index') }}"><i data-lucide="phone"></i> Téléphone</a></li>
+                        <li><a href="{{ url_for('platform.index') }}"><i data-lucide="message-circle"></i> WhatsApp</a>
+                        </li>
+                        <li><a href="{{ url_for('platform.index') }}"><i data-lucide="mail"></i> Email & SMS</a></li>
+                        <li><a href="{{ url_for('platform.index') }}"><i data-lucide="share-2"></i> Réseaux Sociaux</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; {{ current_year }} Waka Com - Tous droits réservés</p>
+                <div class="footer-badges">
+                    <span class="footer-badge"><i data-lucide="cloud"></i> Azure AI Foundry</span>
+                    <span class="footer-badge"><i data-lucide="bot"></i> Agents multimodaux</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL CHAT DÉMO -->
+    <div class="demo-chat-modal" id="demoChatModal">
+        <div class="demo-chat-modal-backdrop" id="demoChatBackdrop"></div>
+        <div class="demo-chat-modal-content">
+            <button class="demo-chat-close" id="closeDemoChat" aria-label="Fermer">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="demo-chat-modal-header">
+                <i data-lucide="message-circle"></i>
+                <span>Discutez avec notre Agent</span>
+            </div>
+            <iframe 
+                src="https://wakavoice-staging.azurewebsites.net/text-agents/embed/95135759-59cb-4dab-baf5-811e7f8845f9?logo=https%3A%2F%2Fgalaxyaiusagea3f6.blob.core.windows.net%2Fintegration-media%2Flogo%2F20260116_022539_4258121a_logo.png&color=%234a148c"
+                class="demo-chat-modal-iframe"
+                allow="microphone"
+                title="Agent Waka Com - Demande de démo">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        lucide.createIcons();
+        
+        // Demo Chat Modal
+        const openBtn = document.getElementById('openDemoChat');
+        const closeBtn = document.getElementById('closeDemoChat');
+        const backdrop = document.getElementById('demoChatBackdrop');
+        const modal = document.getElementById('demoChatModal');
+        
+        if (openBtn && modal) {
+            openBtn.addEventListener('click', () => {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                lucide.createIcons();
+            });
+        }
+        
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        if (backdrop) {
+            backdrop.addEventListener('click', () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Fermer avec Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+
+{% block title %}Nos Services - Centre de Contact IA Géré{% endblock %}
+
+{% block meta_description %}Services de centre de contact IA géré par Waka Com : service client, télévente, prise de
+RDV, enquêtes. Dashboard qualité temps réel, transcriptions, analyse de sentiment.{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="hero-section hero-modern">
+    <div class="hero-grid">
+        <div class="hero-content">
+            <span class="hero-badge">
+                <i data-lucide="headphones"></i>
+                Service Géré Azure-First
+            </span>
+
+            <h1>
+                Nous Gérons Vos<br>
+                <span class="highlight">Opérations Clients Azure AI</span>
+            </h1>
+
+            <p>
+                Service client, télévente, prise de rendez-vous, enquêtes.
+                Waka Com déploie et pilote votre centre de contact IA sur Azure,
+                avec une supervision complète des performances, de la qualité et des coûts.
+            </p>
+
+            <div class="hero-kpis">
+                <div class="hero-kpi">
+                    <span class="value">-85%</span>
+                    <span class="label">Coûts vs BPO</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">0%</span>
+                    <span class="label">Turnover</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">24/7</span>
+                    <span class="label">Couverture</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">100%</span>
+                    <span class="label">Conformité</span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="{{ url_for('demo.index') }}" class="btn btn-primary btn-lg">
+                    <i data-lucide="play-circle"></i>
+                    Demander une Démo
+                </a>
+                <a href="{{ url_for('benchmark.index') }}" class="btn btn-outline btn-lg">
+                    <i data-lucide="bar-chart-3"></i>
+                    Voir le Benchmark
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-side">
+            <div class="hero-panel">
+                <h4><i data-lucide="settings"></i> Opérations gérées de bout en bout</h4>
+                <p>Configuration, intégrations, supervision et optimisation continue par notre équipe.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">Ops 24/7</span>
+                    <span class="panel-tag">QA</span>
+                    <span class="panel-tag">SLA</span>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <h4><i data-lucide="database"></i> Données & RAG</h4>
+                <p>Vos documents, procédures et FAQ alimentent des réponses fiables et traçables.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">AI Search</span>
+                    <span class="panel-tag">Cosmos DB</span>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <h4><i data-lucide="shield-check"></i> Conformité & sécurité Azure</h4>
+                <p>RGPD, chiffrement, audit trail et gouvernance enterprise.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">RGPD</span>
+                    <span class="panel-tag">ISO 27001</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES PRINCIPAUX -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="headphones"></i>
+            Opérations
+        </span>
+        <h2>Confiez-nous Vos Opérations</h2>
+        <p>
+            Nous configurons et opérons vos agents sur Azure AI Foundry.
+            Vous gardez un contrôle total via un dashboard temps réel.
+        </p>
+    </div>
+
+    <p class="section-lead">
+        Chaque opération est configurée autour de vos procédures, vos intégrations et vos objectifs.
+        Les agents restent alignés aux scripts et aux contraintes réglementaires tout au long des campagnes.
+    </p>
+
+    <div class="feature-rows">
+        <div class="feature-row">
+            <div class="icon"><i data-lucide="headphones"></i></div>
+            <div>
+                <h4>Service Client & Support</h4>
+                <p>Agents IA 24/7 : réponses instantanées, RAG sur vos bases, suivi de commandes, FAQ et escalade humaine.</p>
+                <div class="meta">
+                    <span>Omnicanal</span>
+                    <span>RAG</span>
+                    <span>QoS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="icon"><i data-lucide="shopping-cart"></i></div>
+            <div>
+                <h4>Télévente & Prospection</h4>
+                <p>Qualification de leads, scripts dynamiques, objection handling et intégrations CRM.</p>
+                <div class="meta">
+                    <span>Lead scoring</span>
+                    <span>CRM</span>
+                    <span>Scripts dynamiques</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="icon"><i data-lucide="calendar-check"></i></div>
+            <div>
+                <h4>Prise de Rendez-vous</h4>
+                <p>Synchronisation Outlook/Google, créneaux en temps réel, rappels automatiques et modifications self‑service.</p>
+                <div class="meta">
+                    <span>Calendriers</span>
+                    <span>Rappels</span>
+                    <span>Confirmation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-row">
+            <div class="icon"><i data-lucide="clipboard-list"></i></div>
+            <div>
+                <h4>Enquêtes & Sondages</h4>
+                <p>NPS, CSAT, verbatims et sentiment analysis pour des insights actionnables.</p>
+                <div class="meta">
+                    <span>NPS</span>
+                    <span>CSAT</span>
+                    <span>Sentiment</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICE GÉRÉ -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="building-2"></i>
+            Service Géré
+        </span>
+        <h2>Nous Gérons, Vous Supervisez</h2>
+        <p>
+            Waka Com prend en charge l'intégralité de votre centre de contact IA sur Azure.
+            Vous gardez une visibilité totale sur les opérations et la conformité.
+        </p>
+    </div>
+
+    <div class="two-columns">
+        <div class="column">
+            <h4><i data-lucide="settings"></i> Ce Que Nous Faisons</h4>
+            <ul class="simple-list">
+                <li>Configuration d'agents IA multimodaux</li>
+                <li>Intégration via API, MCP, OpenAPI et Python</li>
+                <li>RAG sur vos procédures et documents</li>
+                <li>Monitoring, QA et optimisation continue</li>
+                <li>Support technique dédié Azure</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h4><i data-lucide="eye"></i> Ce Que Vous Obtenez</h4>
+            <ul class="simple-list">
+                <li>Dashboard qualité temps réel</li>
+                <li>Transcriptions & audit trail complet</li>
+                <li>Analyse de sentiment par conversation</li>
+                <li>Écoute et réécoute des appels</li>
+                <li>Rapports détaillés et exports</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Prêt à Nous Confier Vos Opérations ?</h2>
+    <p>
+        Discutons de vos besoins. Nous vous montrerons comment Waka Com
+        déploie un centre de contact Azure AI avec transparence totale.
+    </p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('demo.index') }}" class="btn btn-primary btn-lg">
+            <i data-lucide="calendar-check"></i>
+            Demander une Démo
+        </a>
+        <a href="{{ url_for('benchmark.index') }}" class="btn btn-secondary btn-lg">
+            <i data-lucide="bar-chart-3"></i>
+            Voir le Benchmark
+        </a>
+    </div>
+</section>
+{% endblock %}

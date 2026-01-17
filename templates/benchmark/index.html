@@ -1,0 +1,485 @@
+{% extends "base.html" %}
+
+{% block title %}Benchmark : Centre de Contact IA vs Conventionnel{% endblock %}
+
+{% block meta_description %}Comparaison détaillée entre Waka Com et les centres de contact conventionnels : RH,
+formation, performance, disponibilité, coûts.{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="hero-section hero-modern">
+    <div class="hero-grid">
+        <div class="hero-content">
+            <span class="hero-badge">
+                <i data-lucide="bar-chart-3"></i>
+                Benchmark Complet
+            </span>
+
+            <h1>
+                Centre de Contact IA<br>
+                <span class="highlight">vs Conventionnel</span>
+            </h1>
+
+            <p>
+                Analyse détaillée et objective des différences entre Waka Com
+                et un centre de contact BPO traditionnel. RH, formation, performance,
+                disponibilité, intégration et coûts.
+            </p>
+
+            <div class="hero-kpis">
+                <div class="hero-kpi">
+                    <span class="value">-85%</span>
+                    <span class="label">Coûts</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">0%</span>
+                    <span class="label">Turnover</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">24/7</span>
+                    <span class="label">Disponibilité</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">&lt; 500ms</span>
+                    <span class="label">Réponse</span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="{{ url_for('demo.index') }}" class="btn btn-primary btn-lg">
+                    <i data-lucide="play-circle"></i>
+                    Demander une Démo
+                </a>
+                <a href="{{ url_for('platform.index') }}" class="btn btn-outline btn-lg">
+                    <i data-lucide="cpu"></i>
+                    Découvrir la Plateforme
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-side">
+            <div class="hero-panel">
+                <h4><i data-lucide="check-circle"></i> Qualité constante</h4>
+                <p>Conformité scriptée, zéro fatigue et écart‑type quasi nul.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">QA</span>
+                    <span class="panel-tag">Audit</span>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <h4><i data-lucide="trending-up"></i> Scalabilité immédiate</h4>
+                <p>Montée en charge instantanée grâce à l’auto‑scaling Azure.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">Auto‑scale</span>
+                    <span class="panel-tag">Azure</span>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <h4><i data-lucide="shield-check"></i> Conformité & sécurité</h4>
+                <p>RGPD, chiffrement et traçabilité complète des interactions.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">RGPD</span>
+                    <span class="panel-tag">ISO 27001</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SYNTHESE -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="zap"></i>
+            En Résumé
+        </span>
+        <h2>Synthèse Comparative</h2>
+    </div>
+
+    <div class="benchmark-summary">
+        <div class="benchmark-card waka">
+            <div class="benchmark-header">
+                <i data-lucide="bot"></i>
+                <h3>Waka Com</h3>
+                <span class="benchmark-badge accent">IA 100%</span>
+            </div>
+            <ul class="benchmark-list">
+                <li><i data-lucide="check-circle"></i> Déploiement en 30 minutes</li>
+                <li><i data-lucide="check-circle"></i> Disponible 24/7/365</li>
+                <li><i data-lucide="check-circle"></i> Qualité constante</li>
+                <li><i data-lucide="check-circle"></i> Coût prévisible à l'usage</li>
+                <li><i data-lucide="check-circle"></i> Scalabilité infinie</li>
+                <li><i data-lucide="check-circle"></i> Intégration Back & Front Office</li>
+                <li><i data-lucide="check-circle"></i> Aucune gestion RH</li>
+            </ul>
+        </div>
+
+        <div class="benchmark-vs">VS</div>
+
+        <div class="benchmark-card conventional">
+            <div class="benchmark-header">
+                <i data-lucide="headphones"></i>
+                <h3>Centre Conventionnel</h3>
+                <span class="benchmark-badge gray">BPO</span>
+            </div>
+            <ul class="benchmark-list">
+                <li><i data-lucide="x-circle"></i> Déploiement en 3-6 mois</li>
+                <li><i data-lucide="x-circle"></i> Horaires limités ou coûteux 24/7</li>
+                <li><i data-lucide="x-circle"></i> Qualité variable selon agents</li>
+                <li><i data-lucide="x-circle"></i> Coûts fixes élevés</li>
+                <li><i data-lucide="x-circle"></i> Scalabilité limitée</li>
+                <li><i data-lucide="x-circle"></i> Intégration complexe</li>
+                <li><i data-lucide="x-circle"></i> Gestion RH intensive</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ASPECT RH -->
+<section class="section section-alt">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="users"></i>
+            Ressources Humaines
+        </span>
+        <h2>Aspect RH : Recrutement, Turnover & Gestion</h2>
+    </div>
+
+    <div class="comparison-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Critère</th>
+                    <th><i data-lucide="bot"></i> Waka Com</th>
+                    <th><i data-lucide="headphones"></i> Conventionnel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Recrutement</strong></td>
+                    <td class="positive">Aucun - Agent IA prêt à l'emploi</td>
+                    <td class="negative">3-8 semaines par agent<br>Coûts élevés</td>
+                </tr>
+                <tr>
+                    <td><strong>Turnover annuel</strong></td>
+                    <td class="positive">0%</td>
+                    <td class="negative">30-50% en moyenne</td>
+                </tr>
+                <tr>
+                    <td><strong>Absences / Maladies</strong></td>
+                    <td class="positive">0 jour d'absence</td>
+                    <td class="negative">8-15 jours/an/agent</td>
+                </tr>
+                <tr>
+                    <td><strong>Gestion administrative</strong></td>
+                    <td class="positive">0 - Aucune charge sociale</td>
+                    <td class="negative">Coût indirect : 30-40% du salaire</td>
+                </tr>
+                <tr>
+                    <td><strong>Conflits / Litiges</strong></td>
+                    <td class="positive">Aucun risque prud'homal</td>
+                    <td class="negative">Risques prud'homaux fréquents</td>
+                </tr>
+                <tr>
+                    <td><strong>Management</strong></td>
+                    <td class="positive">Dashboard automatisé</td>
+                    <td class="negative">1 superviseur / 10-15 agents</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- FORMATION -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="graduation-cap"></i>
+            Formation
+        </span>
+        <h2>Formation Initiale & Montée en Compétence</h2>
+    </div>
+
+    <div class="comparison-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Critère</th>
+                    <th><i data-lucide="bot"></i> Waka Com</th>
+                    <th><i data-lucide="headphones"></i> Conventionnel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Formation initiale</strong></td>
+                    <td class="positive">Configuration en 30 min</td>
+                    <td class="negative">2-6 semaines, coûts importants</td>
+                </tr>
+                <tr>
+                    <td><strong>Temps de productivité</strong></td>
+                    <td class="positive">Immédiat après configuration</td>
+                    <td class="negative">3-6 mois pour pleine efficacité</td>
+                </tr>
+                <tr>
+                    <td><strong>Mise à jour connaissances</strong></td>
+                    <td class="positive">Instantanée - Base RAG</td>
+                    <td class="negative">2-10h/mois/agent</td>
+                </tr>
+                <tr>
+                    <td><strong>Nouveaux produits</strong></td>
+                    <td class="positive">Indexation = agent formé</td>
+                    <td class="negative">1-4 semaines de formation</td>
+                </tr>
+                <tr>
+                    <td><strong>Courbe d'apprentissage</strong></td>
+                    <td class="positive">Performance max immédiate</td>
+                    <td class="negative">-30-50% pendant 3-6 mois</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- EXEMPLE CONCRET -->
+    <div class="example-box">
+        <h4><i data-lucide="lightbulb"></i> Exemple Concret : Changement de Procédure de Prise de RDV</h4>
+        <p style="margin-bottom: 24px; color: var(--gray-600);">
+            Nouvelle exigence : demander une validation d'un élément supplémentaire au client lors de la prise de
+            rendez-vous.
+        </p>
+
+        <div class="example-comparison">
+            <div class="example-card conventional">
+                <h5><i data-lucide="headphones"></i> Centre de Contact Conventionnel</h5>
+                <ol class="example-steps">
+                    <li><i data-lucide="calendar"></i> Réunion avec le responsable d'équipe</li>
+                    <li><i data-lucide="users"></i> Briefing de l'équipe par le responsable</li>
+                    <li><i data-lucide="alert-triangle"></i> 3 agents absents lors du briefing → rattrapage
+                        nécessaire</li>
+                    <li><i data-lucide="file-text"></i> Communication écrite sur la procédure</li>
+                    <li><i data-lucide="map-pin"></i> Affichage dans l'espace de travail</li>
+                    <li><i data-lucide="message-square"></i> Formation sur le niveau de discours</li>
+                    <li><i data-lucide="help-circle"></i> Quiz d'assimilation pour chaque agent</li>
+                    <li><i data-lucide="clipboard-check"></i> Écoutes qualité pour vérifier l'application</li>
+                    <li><i data-lucide="refresh-cw"></i> Recadrage des agents non conformes</li>
+                </ol>
+                <div class="example-result negative">
+                    <i data-lucide="clock"></i>
+                    <span><strong>Délai :</strong> 1-2 semaines | <strong>Conformité :</strong> ~75% après 1 mois</span>
+                </div>
+            </div>
+
+            <div class="example-card waka">
+                <h5><i data-lucide="bot"></i> Waka Com</h5>
+                <ol class="example-steps">
+                    <li><i data-lucide="cloud-upload"></i> Upload de la nouvelle procédure</li>
+                    <li><i data-lucide="refresh-cw"></i> Indexation automatique (RAG)</li>
+                    <li><i data-lucide="check-circle"></i> Agent opérationnel</li>
+                </ol>
+                <div class="example-result positive">
+                    <i data-lucide="zap"></i>
+                    <span><strong>Délai :</strong> 5 minutes | <strong>Conformité :</strong> 100% immédiat</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PERFORMANCE -->
+<section class="section section-alt">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="gauge"></i>
+            Performance
+        </span>
+        <h2>Performance & Écart-Type</h2>
+    </div>
+
+    <div class="comparison-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Critère</th>
+                    <th><i data-lucide="bot"></i> Waka Com</th>
+                    <th><i data-lucide="headphones"></i> Conventionnel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Qualité des réponses</strong></td>
+                    <td class="positive">Constante - Écart-type ≈ 0%</td>
+                    <td class="negative">Variable - Écart-type 15-40%</td>
+                </tr>
+                <tr>
+                    <td><strong>Temps de réponse</strong></td>
+                    <td class="positive">&lt; 500ms</td>
+                    <td class="negative">30 sec - 5 min</td>
+                </tr>
+                <tr>
+                    <td><strong>Conformité script</strong></td>
+                    <td class="positive">100%</td>
+                    <td class="negative">70-85%</td>
+                </tr>
+                <tr>
+                    <td><strong>Erreurs factuelles</strong></td>
+                    <td class="positive">&lt; 1%</td>
+                    <td class="negative">5-15%</td>
+                </tr>
+                <tr>
+                    <td><strong>Fatigue / Stress</strong></td>
+                    <td class="positive">Aucun impact</td>
+                    <td class="negative">-20% en fin de journée</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="stats-grid stats-grid-4">
+        <div class="stat-card">
+            <div class="stat-value">0%</div>
+            <div class="stat-label">Écart-type IA</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">25%</div>
+            <div class="stat-label">Écart-type humain</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Conformité IA</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">75%</div>
+            <div class="stat-label">Conformité humaine</div>
+        </div>
+    </div>
+</section>
+
+<!-- DISPONIBILITE -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="clock"></i>
+            Disponibilité
+        </span>
+        <h2>Disponibilité & Couverture Horaire</h2>
+    </div>
+
+    <div class="comparison-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Critère</th>
+                    <th><i data-lucide="bot"></i> Waka Com</th>
+                    <th><i data-lucide="headphones"></i> Conventionnel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Couverture horaire</strong></td>
+                    <td class="positive">24/7/365 natif</td>
+                    <td class="negative">24/7 = +80-150% du coût</td>
+                </tr>
+                <tr>
+                    <td><strong>Jours fériés</strong></td>
+                    <td class="positive">Service normal</td>
+                    <td class="negative">+100-200% tarif</td>
+                </tr>
+                <tr>
+                    <td><strong>Pics d'activité</strong></td>
+                    <td class="positive">Auto-scaling Azure</td>
+                    <td class="negative">CDD/intérim coûteux</td>
+                </tr>
+                <tr>
+                    <td><strong>Multilingue</strong></td>
+                    <td class="positive">140+ langues natives</td>
+                    <td class="negative">Pools dédiés par langue</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- COUTS -->
+<section class="section section-alt">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="piggy-bank"></i>
+            Économies
+        </span>
+        <h2>Structure de Coûts Optimisée</h2>
+    </div>
+
+    <div class="comparison-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Poste de Coût</th>
+                    <th><i data-lucide="bot"></i> Waka Com</th>
+                    <th><i data-lucide="headphones"></i> Conventionnel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Charges sociales</strong></td>
+                    <td><strong>Charges sociales</strong></td>
+                    <td class="positive">Aucune</td>
+                    <td class="negative">30-45% du salaire brut</td>
+                </tr>
+                <tr>
+                    <td><strong>Management</strong></td>
+                    <td class="positive">Dashboard inclus</td>
+                    <td class="negative">1 superviseur / 10-15 agents</td>
+                </tr>
+                <tr>
+                    <td><strong>Formation continue</strong></td>
+                    <td class="positive">Mise à jour instantanée</td>
+                    <td class="negative">Budget formation récurrent</td>
+                </tr>
+                <tr>
+                    <td><strong>Infrastructure</strong></td>
+                    <td class="positive">100% cloud, inclus</td>
+                    <td class="negative">Locaux, matériel, téléphonie</td>
+                </tr>
+                <tr>
+                    <td><strong>Scalabilité</strong></td>
+                    <td class="positive">À la demande, instantané</td>
+                    <td class="negative">Recrutement + formation</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="roi-calculator">
+        <h4><i data-lucide="trending-up"></i> Avantages Économiques</h4>
+        <div class="roi-grid">
+            <div class="roi-item">
+                <span class="roi-label">Réduction des coûts</span>
+                <span class="roi-value positive">Jusqu'à -85%</span>
+            </div>
+            <div class="roi-item">
+                <span class="roi-label">Coûts cachés</span>
+                <span class="roi-value positive">0%</span>
+            </div>
+            <div class="roi-item highlight">
+                <span class="roi-label">Tarification</span>
+                <span class="roi-value accent">À l'usage</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Prêt à Révolutionner Votre Centre de Contact ?</h2>
+    <p>Demandez une démonstration personnalisée et obtenez votre lien de test.</p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('demo.index') }}" class="btn btn-primary btn-lg">
+            <i data-lucide="play-circle"></i>
+            Demander une Démo
+        </a>
+        <a href="{{ url_for('platform.index') }}" class="btn btn-secondary btn-lg">
+            <i data-lucide="cpu"></i>
+            Découvrir la Plateforme
+        </a>
+    </div>
+</section>
+{% endblock %}

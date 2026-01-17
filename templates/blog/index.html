@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block meta_description %}Blog Waka Com : actualités, conseils et tendances sur les centres de contact IA, la
+relation client et l'automatisation.{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="hero-section">
+    <span class="hero-badge">
+        <i data-lucide="file-text"></i>
+        Blog
+    </span>
+
+    <h1>
+        Actualités &<br>
+        <span class="highlight">Ressources</span>
+    </h1>
+
+    <p>
+        Découvrez nos articles sur l'IA conversationnelle,
+        les centres d'appel et la transformation de la relation client.
+    </p>
+</section>
+
+<!-- ARTICLES -->
+<section class="section">
+    <div class="cards-grid">
+        {% for article in articles %}
+        <div class="card">
+            <span class="section-badge" style="margin-bottom: 16px;">{{ article.category }}</span>
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.excerpt }}</p>
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-100);">
+                <span style="font-size: 0.8125rem; color: var(--gray-400);">
+                    <i data-lucide="clock"></i> {{ article.read_time }} min
+                </span>
+                <a href="{{ url_for('blog.article', slug=article.slug) }}" class="card-link">
+                    Lire l'article <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <!-- Articles par défaut si aucun n'est chargé -->
+        <div class="card">
+            <span class="section-badge" style="margin-bottom: 16px;">Tendances</span>
+            <h3>L'IA Conversationnelle en 2026 : État des Lieux</h3>
+            <p>Comment les centres de contact IA transforment la relation client et quelles sont les tendances à suivre
+                cette année.</p>
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-100);">
+                <span style="font-size: 0.8125rem; color: var(--gray-400);">
+                    <i data-lucide="clock"></i> 5 min
+                </span>
+                <span class="card-link" style="cursor: default; opacity: 0.5;">
+                    Bientôt disponible
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="section-badge" style="margin-bottom: 16px;">Guide</span>
+            <h3>Comment Réussir sa Transition vers un Centre de Contact IA</h3>
+            <p>Les étapes clés pour passer d'un centre de contact traditionnel à une solution 100% IA sans perturber vos
+                opérations.</p>
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-100);">
+                <span style="font-size: 0.8125rem; color: var(--gray-400);">
+                    <i data-lucide="clock"></i> 8 min
+                </span>
+                <span class="card-link" style="cursor: default; opacity: 0.5;">
+                    Bientôt disponible
+                </span>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="section-badge" style="margin-bottom: 16px;">Cas Client</span>
+            <h3>Retour d'Expérience : 6 Mois avec Waka Com</h3>
+            <p>Un directeur de service client partage son expérience et les résultats obtenus après l'implémentation de
+                notre solution.</p>
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-100);">
+                <span style="font-size: 0.8125rem; color: var(--gray-400);">
+                    <i data-lucide="clock"></i> 6 min
+                </span>
+                <span class="card-link" style="cursor: default; opacity: 0.5;">
+                    Bientôt disponible
+                </span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="cta-section">
+    <h2>Restez Informé</h2>
+    <p>
+        Recevez nos derniers articles et actualités directement dans votre boîte mail.
+        Pas de spam, uniquement du contenu de qualité.
+    </p>
+    <form style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 500px; margin: 0 auto;">
+        <input type="email" placeholder="Votre email professionnel" required
+            style="flex: 1; min-width: 250px; padding: 14px 20px; border: 1px solid var(--gray-300); border-radius: var(--radius-md); font-size: 0.9375rem;">
+        <button type="submit" class="btn btn-primary">
+            <i data-lucide="send"></i>
+            S'abonner
+        </button>
+    </form>
+</section>
+{% endblock %}

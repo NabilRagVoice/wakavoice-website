@@ -1,0 +1,528 @@
+{% extends "base.html" %}
+
+{% block title %}Notre Technologie - Service Géré Waka Com{% endblock %}
+
+{% block meta_description %}Waka Com gère votre centre de contact IA. Découvrez notre technologie : agents
+personnalisés, intégrations, RAG, sécurité Azure et conformité RGPD.{% endblock %}
+
+{% block content %}
+<!-- HERO -->
+<section class="hero-section hero-modern">
+    <div class="hero-grid">
+        <div class="hero-content">
+            <span class="hero-badge">
+                <i data-lucide="settings"></i>
+                Technologie Azure AI Foundry
+            </span>
+
+            <h1>
+                Nous Gérons<br>
+                <span class="highlight">Votre Centre de Contact Azure AI</span>
+            </h1>
+
+            <p>
+                Expliquez-nous votre besoin, nous créons et gérons votre agent IA sur Azure.
+                Vous vous concentrez sur votre métier, nous orchestrons la stack Azure et l’IA.
+            </p>
+
+            <div class="hero-kpis">
+                <div class="hero-kpi">
+                    <span class="value">&lt; 300ms</span>
+                    <span class="label">Latence voix</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">140+</span>
+                    <span class="label">Langues</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">4</span>
+                    <span class="label">Types Tools</span>
+                </div>
+                <div class="hero-kpi">
+                    <span class="value">6</span>
+                    <span class="label">Étapes RAG</span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="{{ url_for('demo.index') }}" class="btn btn-primary btn-lg">
+                    <i data-lucide="play-circle"></i>
+                    Demander une Démo
+                </a>
+                <a href="{{ url_for('benchmark.index') }}" class="btn btn-outline btn-lg">
+                    <i data-lucide="bar-chart-3"></i>
+                    Voir le Benchmark
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-side">
+            <div class="hero-panel">
+                <h4><i data-lucide="mic"></i> Speech & Voice Live</h4>
+                <p>Voix naturelles, barge‑in, VAD sémantique et streaming temps réel.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">Speech</span>
+                    <span class="panel-tag">Realtime</span>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <h4><i data-lucide="database"></i> Data & RAG</h4>
+                <p>AI Search + Cosmos DB pour des réponses documentées et fiables.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">AI Search</span>
+                    <span class="panel-tag">Cosmos DB</span>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <h4><i data-lucide="shield"></i> Sécurité entreprise</h4>
+                <p>Chiffrement, VNet, Private Endpoints et gouvernance Azure.</p>
+                <div class="panel-meta">
+                    <span class="panel-tag">VNet</span>
+                    <span class="panel-tag">Private</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEOS DEMO -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="play-circle"></i>
+            Démonstrations
+        </span>
+        <h2>Nos Agents en Action</h2>
+        <p>
+            Une expérience fluide sur chaque canal, portée par Azure Speech, Azure OpenAI
+            et une orchestration agentique robuste.
+        </p>
+    </div>
+
+    <p class="section-lead">
+        Chaque démo illustre un scénario métier réel, avec des intégrations actives, une qualité vocale premium
+        et un pilotage en temps réel. L’objectif : un centre de contact moderne et mesurable.
+    </p>
+
+    <div class="demo-videos-grid">
+        <div class="demo-video-card">
+            <div class="demo-video-placeholder">
+                <i data-lucide="phone"></i>
+                <span>Agent Voix</span>
+            </div>
+            <h4>Conversation Téléphonique</h4>
+            <p>Écoutez un agent IA gérer un appel de service client en temps réel.</p>
+        </div>
+        <div class="demo-video-card">
+            <div class="demo-video-embed">
+                <iframe 
+                    src="https://onedrive.live.com/embed?resid=E60BFD69A7F34D7A%21sc4fd5300e1c7a7ba24b2d7a53532bcf0&authkey=!AFS_S4G0Ys01d-8"
+                    frameborder="0" 
+                    scrolling="no" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <h4>Conversation Chat</h4>
+            <p>Suivez une conversation par chat avec un agent IA sur WhatsApp.</p>
+        </div>
+        <div class="demo-video-card">
+            <div class="demo-video-placeholder">
+                <i data-lucide="video"></i>
+                <span>Agent Avatar</span>
+            </div>
+            <h4>Avatar Vidéo</h4>
+            <p>Découvrez notre agent avatar en vidéo pour l'accueil et le support.</p>
+        </div>
+    </div>
+</section>
+
+<!-- NOTRE APPROCHE -->
+<section class="section section-alt">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="settings"></i>
+            Notre Approche
+        </span>
+        <h2>Comment Nous Créons Votre Agent</h2>
+        <p>
+            De la compréhension de votre besoin à la mise en production,
+            notre équipe s'occupe de tout.
+        </p>
+    </div>
+
+    <div class="workflow-steps">
+        <!-- Étape 1 -->
+        <div class="workflow-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h4>Analyse de Votre Besoin</h4>
+                <p>Nous étudions votre activité, vos procédures et vos objectifs pour concevoir l'agent idéal.</p>
+                <div class="step-options">
+                    <span class="step-option"><i data-lucide="message-square"></i> Échange initial</span>
+                    <span class="step-option"><i data-lucide="clipboard-list"></i> Analyse métier</span>
+                    <span class="step-option"><i data-lucide="git-branch"></i> Cartographie des flux</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="workflow-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h4>Configuration de l'Agent</h4>
+                <p>Nous paramétrons votre agent : type (voix, texte, avatar), voix parmi 600+ options, modèle IA adapté.
+                </p>
+                <div class="step-options">
+                    <span class="step-option"><i data-lucide="phone"></i> Voix</span>
+                    <span class="step-option"><i data-lucide="message-circle"></i> Texte</span>
+                    <span class="step-option"><i data-lucide="video"></i> Avatar</span>
+                    <span class="step-option"><i data-lucide="globe"></i> 140+ langues</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="workflow-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h4>Intégration de Vos Systèmes</h4>
+                <p>Nous connectons l'agent à vos outils : CRM, ERP, calendrier, base de données, APIs métier.</p>
+                <div class="step-options">
+                    <span class="step-option"><i data-lucide="plug"></i> API REST</span>
+                    <span class="step-option"><i data-lucide="server"></i> MCP Server</span>
+                    <span class="step-option"><i data-lucide="database"></i> Bases de données</span>
+                    <span class="step-option"><i data-lucide="calendar"></i> Calendriers</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="workflow-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h4>Alimentation en Connaissances</h4>
+                <p>Nous indexons vos documents, procédures et FAQ pour que l'agent réponde avec vos informations.</p>
+                <div class="step-options">
+                    <span class="step-option"><i data-lucide="cloud"></i> SharePoint</span>
+                    <span class="step-option"><i data-lucide="file-text"></i> Documents</span>
+                    <span class="step-option"><i data-lucide="globe"></i> Sites web</span>
+                    <span class="step-option"><i data-lucide="database"></i> Bases FAQ</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 5 -->
+        <div class="workflow-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h4>Tests & Validation</h4>
+                <p>Nous testons l'agent avec vous, ajustons le comportement et validons les scénarios.</p>
+                <div class="step-options">
+                    <span class="step-option"><i data-lucide="bug"></i> Tests scénarios</span>
+                    <span class="step-option"><i data-lucide="sliders"></i> Ajustements</span>
+                    <span class="step-option"><i data-lucide="check-circle"></i> Validation client</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Étape 6 -->
+        <div class="workflow-step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+                <h4>Mise en Production & Suivi</h4>
+                <p>Déploiement, monitoring en temps réel et amélioration continue de votre agent.</p>
+                <div class="step-options">
+                    <span class="step-option"><i data-lucide="rocket"></i> Déploiement</span>
+                    <span class="step-option"><i data-lucide="trending-up"></i> Monitoring</span>
+                    <span class="step-option"><i data-lucide="refresh-cw"></i> Amélioration continue</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TOOLS -->
+<section class="section section-alt">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="wrench"></i>
+            Tools
+        </span>
+        <h2>4 Types de Tools pour Toutes Vos Intégrations</h2>
+        <p>
+            Les Tools permettent à votre agent IA d'exécuter des actions concrètes :
+            consulter un CRM, créer un ticket, vérifier un stock, planifier un RDV —
+            avec la gouvernance et la sécurité Azure.
+        </p>
+    </div>
+
+    <div class="tools-showcase">
+        <!-- API REST -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-icon api"><i data-lucide="braces"></i></div>
+                <h4>API REST</h4>
+            </div>
+            <p>Connectez n'importe quelle API REST existante. Définissez l'URL, les headers, le body et le mapping des
+                paramètres.</p>
+            <ul class="tool-features">
+                <li><i data-lucide="check-circle"></i> GET, POST, PUT, DELETE, PATCH</li>
+                <li><i data-lucide="check-circle"></i> Headers personnalisés & authentification</li>
+                <li><i data-lucide="check-circle"></i> Mapping dynamique des paramètres</li>
+                <li><i data-lucide="check-circle"></i> Gestion des erreurs et retries</li>
+            </ul>
+        </div>
+
+        <!-- MCP Server -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-icon mcp"><i data-lucide="server"></i></div>
+                <h4>MCP Server</h4>
+            </div>
+            <p>Model Context Protocol - Standard ouvert pour connecter des serveurs d'outils. Support STDIO, SSE et
+                HTTP.</p>
+            <ul class="tool-features">
+                <li><i data-lucide="check-circle"></i> Protocole standardisé Anthropic</li>
+                <li><i data-lucide="check-circle"></i> 3 modes : STDIO, SSE, HTTP</li>
+                <li><i data-lucide="check-circle"></i> Découverte automatique des tools</li>
+                <li><i data-lucide="check-circle"></i> Écosystème de serveurs MCP</li>
+            </ul>
+        </div>
+
+        <!-- Code Python -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-icon python"><i data-lucide="code"></i></div>
+                <h4>Code Python</h4>
+            </div>
+            <p>Exécutez du code Python personnalisé dans un environnement sandboxé et sécurisé. Idéal pour la logique
+                métier complexe.</p>
+            <ul class="tool-features">
+                <li><i data-lucide="check-circle"></i> Environnement sandboxé Azure</li>
+                <li><i data-lucide="check-circle"></i> Librairies pré-installées</li>
+                <li><i data-lucide="check-circle"></i> Accès aux variables de contexte</li>
+                <li><i data-lucide="check-circle"></i> Logs et debugging intégrés</li>
+            </ul>
+        </div>
+
+        <!-- Import OpenAPI -->
+        <div class="tool-card">
+            <div class="tool-header">
+                <div class="tool-icon openapi"><i data-lucide="file-code"></i></div>
+                <h4>Import OpenAPI</h4>
+            </div>
+            <p>Importez un fichier Swagger/OpenAPI et générez automatiquement tous les tools correspondants en un clic.
+            </p>
+            <ul class="tool-features">
+                <li><i data-lucide="check-circle"></i> Support OpenAPI 3.0 et 3.1</li>
+                <li><i data-lucide="check-circle"></i> Génération automatique des tools</li>
+                <li><i data-lucide="check-circle"></i> Mapping des schémas JSON</li>
+                <li><i data-lucide="check-circle"></i> Mise à jour en un clic</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- RAG -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="database"></i>
+            Base de Connaissances
+        </span>
+        <h2>RAG : Retrieval-Augmented Generation</h2>
+        <p>
+            Enrichissez les réponses de votre agent avec vos propres documents.
+            L'IA répond avec vos informations métier, pas des hallucinations.
+        </p>
+    </div>
+
+    <!-- Sources -->
+    <div class="sources-grid">
+        <div class="source-card">
+            <div class="source-icon"><i data-lucide="cloud"></i></div>
+            <h4>SharePoint</h4>
+            <p>Synchronisation automatique de vos sites et bibliothèques SharePoint.</p>
+        </div>
+        <div class="source-card">
+            <div class="source-icon"><i data-lucide="globe"></i></div>
+            <h4>Web Crawler</h4>
+            <p>Indexation automatique de vos sites web et bases de connaissances en ligne.</p>
+        </div>
+        <div class="source-card">
+            <div class="source-icon"><i data-lucide="cloud-upload"></i></div>
+            <h4>Upload Direct</h4>
+            <p>Importez vos PDF, Word, Excel, PowerPoint et fichiers texte.</p>
+        </div>
+    </div>
+
+    <!-- Pipeline RAG -->
+    <h3 style="text-align: center; margin-top: 60px; margin-bottom: 24px;">Pipeline de Traitement en 6 Étapes</h3>
+    <div class="rag-pipeline">
+        <div class="rag-step">
+            <div class="rag-step-icon"><i data-lucide="file-up"></i></div>
+            <h5>1. Extraction</h5>
+            <span>Parsing multi-format</span>
+        </div>
+        <div class="rag-step">
+            <div class="rag-step-icon"><i data-lucide="scissors"></i></div>
+            <h5>2. Chunking</h5>
+            <span>800 caractères</span>
+        </div>
+        <div class="rag-step">
+            <div class="rag-step-icon"><i data-lucide="message-square"></i></div>
+            <h5>3. Résumé</h5>
+            <span>GPT-5-mini</span>
+        </div>
+        <div class="rag-step">
+            <div class="rag-step-icon"><i data-lucide="tag"></i></div>
+            <h5>4. Entités</h5>
+            <span>Extraction NER</span>
+        </div>
+        <div class="rag-step">
+            <div class="rag-step-icon"><i data-lucide="pen-tool"></i></div>
+            <h5>5. Embeddings</h5>
+            <span>text-embedding-3-small</span>
+        </div>
+        <div class="rag-step">
+            <div class="rag-step-icon"><i data-lucide="database"></i></div>
+            <h5>6. Stockage</h5>
+            <span>AI Search + CosmosDB</span>
+        </div>
+    </div>
+</section>
+
+<!-- AZURE AI FOUNDRY -->
+<section class="section section-alt">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="cloud"></i>
+            Azure AI Foundry
+        </span>
+        <h2>Pourquoi Azure AI Foundry ?</h2>
+        <p>
+            Waka Com est construit sur Azure AI Foundry, la plateforme d'IA d'entreprise de Microsoft.
+            Un choix stratégique pour la sécurité, la conformité et la performance.
+        </p>
+    </div>
+
+    <div class="cards-grid cards-grid-2">
+        <!-- Avantages -->
+        <div class="card">
+            <div class="card-icon primary"><i data-lucide="sparkles"></i></div>
+            <h3>Avantages Clés</h3>
+            <ul class="features-list">
+                <li><i data-lucide="check-circle"></i> <strong>Modèles de pointe</strong> : GPT-4o, GPT-5, Claude,
+                    Phi-4 en un clic</li>
+                <li><i data-lucide="check-circle"></i> <strong>Scalabilité automatique</strong> : De 1 à 10 000
+                    appels simultanés</li>
+                <li><i data-lucide="check-circle"></i> <strong>Latence minimale</strong> : Datacenters France
+                    Central, réseau Azure</li>
+                <li><i data-lucide="check-circle"></i> <strong>Intégration native</strong> : Cosmos DB, AI Search,
+                    Blob Storage, Speech</li>
+                <li><i data-lucide="check-circle"></i> <strong>SLA Enterprise</strong> : 99.9% de disponibilité
+                    garantie</li>
+                <li><i data-lucide="check-circle"></i> <strong>Support Microsoft</strong> : Support technique 24/7
+                </li>
+            </ul>
+        </div>
+
+        <!-- Conformité -->
+        <div class="card">
+            <div class="card-icon accent"><i data-lucide="shield-check"></i></div>
+            <h3>Conformité & Certifications</h3>
+            <ul class="features-list">
+                <li><i data-lucide="check-circle"></i> <strong>RGPD</strong> : Traitement conforme, droit à
+                    l'oubli, portabilité</li>
+                <li><i data-lucide="check-circle"></i> <strong>ISO 27001</strong> : Certification sécurité de
+                    l'information</li>
+                <li><i data-lucide="check-circle"></i> <strong>SOC 2 Type II</strong> : Contrôles de sécurité
+                    audités</li>
+                <li><i data-lucide="check-circle"></i> <strong>HDS</strong> : Hébergeur de Données de Santé (si
+                    applicable)</li>
+                <li><i data-lucide="check-circle"></i> <strong>C5</strong> : Cloud Computing Compliance Controls
+                </li>
+                <li><i data-lucide="check-circle"></i> <strong>ENS</strong> : Esquema Nacional de Seguridad</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sécurité Grid -->
+    <h3 style="text-align: center; margin-top: 60px; margin-bottom: 24px;">Sécurité Intégrée</h3>
+    <div class="security-grid">
+        <div class="security-card">
+            <div class="security-icon"><i data-lucide="map-pin"></i></div>
+            <h4>Données Souveraines</h4>
+            <p>Chaque client hébergé dans une zone Azure EU garantissant la conformité RGPD.</p>
+        </div>
+        <div class="security-card">
+            <div class="security-icon"><i data-lucide="lock"></i></div>
+            <h4>Chiffrement</h4>
+            <p>TLS 1.3 en transit, AES-256 au repos, clés gérées.</p>
+        </div>
+        <div class="security-card">
+            <div class="security-icon"><i data-lucide="shield"></i></div>
+            <h4>Réseau Privé</h4>
+            <p>VNet, Private Endpoints, pas d'exposition publique.</p>
+        </div>
+        <div class="security-card">
+            <div class="security-icon"><i data-lucide="file-text"></i></div>
+            <h4>Audit Trail</h4>
+            <p>Logs complets, transcriptions, traçabilité 100%.</p>
+        </div>
+    </div>
+</section>
+
+<!-- POURQUOI NOUS CHOISIR -->
+<section class="section">
+    <div class="section-header">
+        <span class="section-badge">
+            <i data-lucide="trophy"></i>
+            Avantages
+        </span>
+        <h2>Pourquoi Choisir Waka Com ?</h2>
+    </div>
+
+    <div class="why-grid">
+        <div class="why-card">
+            <div class="why-icon"><i data-lucide="zap"></i></div>
+            <h4>Déploiement Rapide</h4>
+            <p>30 minutes pour configurer un agent complet, opérationnel immédiatement.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i data-lucide="piggy-bank"></i></div>
+            <h4>Réduction des Coûts</h4>
+            <p>Jusqu'à -85% vs un centre de contact conventionnel, tarification à l'usage.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i data-lucide="trending-up"></i></div>
+            <h4>Qualité Constante</h4>
+            <p>0% d'écart-type, 100% de conformité, aucune fatigue.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon"><i data-lucide="clock"></i></div>
+            <h4>24/7/365</h4>
+            <p>Disponibilité permanente, 140+ langues, sans surcoût nuit/week-end.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Prêt à Découvrir la Plateforme ?</h2>
+    <p>
+        Demandez une démonstration et explorez toutes les fonctionnalités
+        de Waka Com avec notre équipe.
+    </p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('demo.index') }}" class="btn btn-primary btn-lg">
+            <i data-lucide="play-circle"></i>
+            Demander une Démo
+        </a>
+        <a href="{{ url_for('benchmark.index') }}" class="btn btn-secondary btn-lg">
+            <i data-lucide="bar-chart-3"></i>
+            Voir le Benchmark
+        </a>
+    </div>
+</section>
+{% endblock %}

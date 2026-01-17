@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block title %}Demander une Démo - Waka Com{% endblock %}
+
+{% block meta_description %}Discutez avec notre agent IA et obtenez un lien de test personnalisé en moins de 15 minutes.{% endblock %}
+
+{% block extra_css %}
+<style>
+    .demo-page {
+        padding: 40px 24px 60px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    
+    .demo-page-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .demo-page-header h1 {
+        font-size: 2rem;
+        color: var(--gray-900);
+        margin-bottom: 8px;
+    }
+    
+    .demo-page-header p {
+        color: var(--gray-600);
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    
+    .demo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+    
+    /* Carte explicative du process */
+    .demo-process-card {
+        background: var(--white);
+        border-radius: var(--radius-xl);
+        padding: 32px;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--gray-200);
+    }
+    
+    .demo-process-card h3 {
+        font-size: 1.25rem;
+        color: var(--gray-900);
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .demo-process-card h3 svg {
+        width: 24px;
+        height: 24px;
+        color: var(--primary);
+    }
+    
+    .demo-process-card > p {
+        color: var(--gray-600);
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+    
+    .demo-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .timeline-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    
+    .timeline-step:last-child {
+        padding-bottom: 0;
+    }
+    
+    .timeline-step:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        left: 18px;
+        top: 36px;
+        width: 2px;
+        height: calc(100% - 20px);
+        background: var(--gray-200);
+    }
+    
+    .timeline-number {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+    
+    .timeline-content h4 {
+        font-size: 1rem;
+        color: var(--gray-900);
+        margin-bottom: 4px;
+    }
+    
+    .timeline-content p {
+        font-size: 0.875rem;
+        color: var(--gray-600);
+        margin: 0;
+    }
+    
+    /* Chat container */
+    .demo-chat-box {
+        background: var(--white);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-xl);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 550px;
+    }
+    
+    .demo-chat-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 20px;
+        background: var(--gradient-primary);
+        color: var(--white);
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+    
+    .demo-chat-header svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .demo-chat-box iframe {
+        flex: 1;
+        width: 100%;
+        border: none;
+        background: var(--gray-50);
+    }
+    
+    @media (max-width: 900px) {
+        .demo-grid {
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+        
+        .demo-chat-box {
+            height: 500px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="demo-page">
+    <div class="demo-page-header">
+        <h1>Testez Waka Com en 15 minutes</h1>
+        <p>Discutez avec notre agent et recevez votre lien de test personnalisé</p>
+    </div>
+    
+    <div class="demo-grid">
+        <!-- Carte explicative du process -->
+        <div class="demo-process-card">
+            <h3>
+                <i data-lucide="sparkles"></i>
+                Comment ça fonctionne ?
+            </h3>
+            <p>Notre agent va comprendre votre besoin et préparer une démo adaptée à votre cas d'usage.</p>
+            
+            <div class="demo-timeline">
+                <div class="timeline-step">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h4>Décrivez votre besoin</h4>
+                        <p>L'agent vous pose les bonnes questions sur votre activité</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h4>Configuration automatique</h4>
+                        <p>Votre agent personnalisé est créé en temps réel</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h4>Recevez votre lien</h4>
+                        <p>Un email avec votre démo à tester sans limite</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chat -->
+        <div class="demo-chat-box">
+            <div class="demo-chat-header">
+                <i data-lucide="message-circle"></i>
+                <span>Discutez avec notre Agent</span>
+            </div>
+            <iframe
+                src="https://wakavoice-staging.azurewebsites.net/text-agents/embed/95135759-59cb-4dab-baf5-811e7f8845f9?logo=https%3A%2F%2Fgalaxyaiusagea3f6.blob.core.windows.net%2Fintegration-media%2Flogo%2F20260116_022539_4258121a_logo.png&color=%234a148c"
+                allow="microphone" 
+                title="Agent Waka Com - Demande de démo">
+            </iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}
